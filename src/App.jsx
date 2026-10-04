@@ -5,7 +5,7 @@ import "./App.css";
 const propertyMenu = {
   buy: [
     {
-      label: "Apartments for sale in Dubai",
+      label: "Apartment for sale in Dubai",
       type: "Apartment",
     },
     {
