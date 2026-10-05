@@ -5,7 +5,7 @@ import "./App.css";
 const propertyMenu = {
   buy: [
     {
-      label: "Apartment for sale in Dubai",
+      label: "Apartments for sale in Dubai",
       type: "Apartment",
     },
     {
@@ -15,10 +15,6 @@ const propertyMenu = {
     {
       label: "Townhouses for sale in Dubai",
       type: "Townhouse",
-    },
-    {
-      label: "Penthouses for sale in Dubai",
-      type: "Penthouse",
     },
   ],
 
@@ -35,10 +31,6 @@ const propertyMenu = {
       label: "Townhouses for rent in Dubai",
       type: "Townhouse",
     },
-    {
-      label: "Penthouses for rent in Dubai",
-      type: "Penthouse",
-    },
   ],
 };
 
@@ -46,10 +38,6 @@ const servicesMenu = [
   {
     label: "Property Management",
     path: "/services/property-management",
-  },
-  {
-    label: "Development Sales & Consultancy",
-    path: "/services/development-sales-and-consultancy",
   },
   {
     label: "Property Valuation",
