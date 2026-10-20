@@ -47,10 +47,6 @@ const servicesMenu = [
     label: "Holiday Home Services",
     path: "/services/holiday-home-services",
   },
-  {
-    label: "Citizenship Program",
-    path: "/services/citizenship-program",
-  },
 ];
 
 const nav = [
@@ -4142,13 +4138,6 @@ function ServicesPage() {
       text: "Make short-term property ownership easier with guest, marketing and operational support.",
       image:
         "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=88",
-    },
-    {
-      title: "Citizenship Program",
-      path: "/services/citizenship-program",
-      text: "Explore residency and investment pathways with a property-led advisory approach.",
-      image:
-        "https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=1400&q=88",
     },
   ];
 
@@ -9027,6 +9016,446 @@ function ProjectDetail({ id }) {
   );
 }
 
+
+// =========================================================
+// HOLIDAY HOMES PAGE — Vibrant Vacation Homes Rental
+// Route: /services/holiday-home-services
+// Form sends leads to the existing /api/pixxi/lead endpoint.
+// =========================================================
+const HH_PHONE =
+  typeof CONTACT !== "undefined" && CONTACT.phone ? CONTACT.phone : "+971-45651830";
+const HH_TEL = `tel:${HH_PHONE.replace(/[^\d+]/g, "")}`;
+
+const HH_IMAGES = {
+  hero: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=2000&q=88",
+  intro: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=88",
+  form: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=88",
+};
+
+const HH_SERVICES = [
+  ["Listing creation and photography", "Professional imagery and written listings built to convert browsers into bookings, not just to describe the property."],
+  ["Multi-platform distribution", "Your property listed and synchronised across the major short-stay booking platforms, on one shared calendar, so double bookings can't happen."],
+  ["Dynamic pricing", "Rates adjusted for season, weekday and weekend demand, city events, and what comparable properties nearby are achieving — rather than one flat nightly figure all year."],
+  ["Guest communication", "Enquiries, questions, and problems answered promptly, including outside office hours. Slow replies lose bookings."],
+  ["Guest screening", "Sensible vetting before a booking is confirmed, so the wrong guest doesn't become your problem."],
+  ["Check-in and check-out", "Arrivals and departures handled by our team, at the hours guests actually travel."],
+  ["Professional cleaning and hotel-standard linen", "A full turnover clean between every single stay, with fresh linen and towels each time."],
+  ["Restocking and consumables", "Toiletries, kitchen basics, and welcome essentials kept topped up so nothing runs out mid-stay."],
+  ["Maintenance and routine inspections", "The property checked regularly and issues fixed before a guest has to report them."],
+  ["DTCM permits and compliance", "Holiday home licensing, registration, and tourism dirham obligations handled as part of the service."],
+  ["Owner reporting", "A clear picture of your bookings, occupancy, and earnings, without you having to ask for it."],
+];
+
+const HH_REASONS = [
+  ["Reviews are the entire business", "In short-term rental, your rating decides your visibility, and your visibility decides your rate. Cleaning standards, response times, and the state of the property on arrival all exist to protect that rating. Everything else follows from it."],
+  ["Priced for the calendar, not for the year", "Dubai demand shifts sharply between peak season, summer, and major city events. Rates that move with it perform considerably better than a fixed nightly price that ignores all three."],
+  ["It's still your home", "Block out any dates you want, for yourself, family, or friends. That flexibility is usually the whole reason owners choose short-term over an annual lease, and we build the calendar around it."],
+  ["Compliant from day one", "Short-term letting in Dubai is regulated. Permits, registration, and tourism fees are handled properly, so your income isn't put at risk by a paperwork gap."],
+  ["Set up right before the first guest", "Furnishing, styling, amenities, and the small details guests actually mention in reviews. We'll tell you honestly what your property needs before it goes live, and what isn't worth spending on."],
+  ["A deliberately focused portfolio", "Vibrant is a new company and we're taking on properties selectively rather than filling a portfolio as fast as possible. Your property is looked after by a team that knows it individually."],
+];
+
+const HH_GOOD_FIT = [
+  "Well located for tourism, leisure, or business travel",
+  "Furnished, or you're prepared to furnish it properly",
+  "Studios, one-bedrooms and two-bedrooms in buildings with good facilities",
+  "A pool, gym, or beach access in the building",
+  "Properties you'd like to use yourself part of the year",
+  "Units currently sitting empty between long-term tenants",
+];
+
+const HH_LONG_TERM = [
+  "Locations with little visitor demand",
+  "Buildings where short-term letting isn't permitted",
+  "Properties needing significant work before they'd photograph or review well",
+  "Owners who want completely fixed, predictable monthly income",
+];
+
+const HH_STEPS = [
+  ["Property assessment", "Tell us about your property. We look at the location, the unit, its condition and furnishing, and what comparable holiday homes nearby are achieving."],
+  ["Your proposal", "We come back with a realistic view of what your property can do on short stays, what it needs before going live, and a clear breakdown of our fees. No obligation to proceed."],
+  ["Setup and licensing", "Furnishing guidance, styling, photography, listing creation, and the DTCM holiday home permit — all handled by us."],
+  ["Live and hosted", "Your property goes live across the booking platforms. From there we run it day to day, and you receive regular updates on bookings and earnings."],
+];
+
+const HH_FAQS = [
+  ["What's the difference between a holiday home and a short-term rental?", "Nothing — they're the same thing. “Holiday home” is the term used in Dubai's licensing framework, and “short-term rental” is how most owners describe it. Both mean letting your property by the night or week rather than on an annual lease."],
+  ["Who is Vibrant Vacation Homes Rental?", "Vibrant is the holiday homes company within the Golden Key group — same ownership and same standards as Golden Key Real Estate, set up as its own company because short-term rental is a genuinely different operation to long-term leasing."],
+  ["Can I still use my own property?", "Yes. Block out any dates you like for yourself, family, or friends. It stays your home, and we plan the calendar around the dates you want."],
+  ["Will I earn more than on a long-term lease?", "Over a strong year, a well-located and well-presented property usually does. But short-term income is variable, running costs are higher, and results depend heavily on location and presentation. We'll give you a realistic view for your specific property rather than a best-case number."],
+  ["Do you handle the DTCM holiday home permit?", "Yes. Licensing, registration, and tourism dirham obligations are handled by us as part of the service."],
+  ["Does my property need to be furnished?", "Yes, fully — furniture, appliances, kitchenware, linen, and the amenities guests expect. If yours isn't there yet, we'll tell you what's genuinely needed and what isn't worth the spend."],
+  ["Who pays for cleaning, linen, and consumables?", "These are running costs of a holiday home and sit with the owner, as utilities and service charges do. We set them out clearly in your proposal so there are no surprises."],
+  ["What if a guest damages something?", "Bookings are covered by the deposit and protection schemes the platforms provide, and we inspect between stays so damage is identified immediately rather than weeks later. We handle the claim and the repair."],
+  ["What if I live outside the UAE?", "Many of our owners do. Everything — setup, licensing, guest arrivals, cleaning, maintenance — runs without you being in the country."],
+  ["Can I switch to a long-term lease later?", "Yes. Circumstances and market conditions change. Golden Key Real Estate handles long-term management within the same group, so moving between the two is straightforward."],
+  ["My property is currently listed and self-managed. Can you take over?", "Yes. We can take over an existing listing without losing your reviews or disrupting confirmed bookings."],
+  ["How do your fees work?", "Fees are a percentage of booking revenue and depend on the property and the level of service. They're set out in writing in your proposal, with no charges introduced later."],
+];
+
+function HolidayHomesForm() {
+  const [status, setStatus] = useState("idle"); // idle | sending | sent
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    if (status === "sending") return;
+
+    const f = new FormData(e.currentTarget);
+    const get = (k) => (f.get(k) || "").toString().trim();
+
+    const details = [
+      ["Property type", get("propertyType")],
+      ["Community or building", get("community")],
+      ["Bedrooms", get("bedrooms")],
+      ["Furnishing status", get("furnishing")],
+      ["Current status", get("currentStatus")],
+      ["Will use the property themselves", get("ownerUse")],
+    ]
+      .filter(([, v]) => v)
+      .map(([k, v]) => `${k}: ${v}`)
+      .join("\n");
+
+    const message = [get("notes"), details].filter(Boolean).join("\n\n");
+
+    setStatus("sending");
+
+    try {
+      const response = await fetch("/api/pixxi/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: get("name"),
+          email: get("email"),
+          phone: get("phone"),
+          message,
+          source: "Holiday Homes page (Vibrant Vacation Homes)",
+        }),
+      });
+
+      const raw = await response.text();
+      let data = {};
+      try {
+        data = raw ? JSON.parse(raw) : {};
+      } catch {
+        data = { success: false };
+      }
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.error || `Lead submission failed (${response.status})`);
+      }
+
+      setStatus("sent");
+    } catch (err) {
+      console.error("Holiday Homes lead failed:", err);
+      alert("Sorry, we could not send your details. Please try again or call us.");
+      setStatus("idle");
+    }
+  }
+
+  if (status === "sent") {
+    return (
+      <div className="hh-success">
+        <h3 className="serif">Thank you — we've received your details.</h3>
+        <p>
+          A member of the Vibrant team will be in touch shortly with an
+          assessment of your property. To speak to someone sooner, call us
+          on <a href={HH_TEL}>{HH_PHONE}</a>.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <form className="hh-form" onSubmit={handleSubmit}>
+      <input name="name" required placeholder="Full name" />
+
+      <div className="hh-form-row">
+        <input name="email" type="email" required placeholder="Email address" />
+        <input name="phone" type="tel" required placeholder="Mobile number" />
+      </div>
+
+      <div className="hh-form-row">
+        <select name="propertyType" defaultValue="" required>
+          <option value="" disabled>Property type</option>
+          <option>Apartment</option>
+          <option>Studio</option>
+          <option>Villa</option>
+          <option>Townhouse</option>
+          <option>Penthouse</option>
+        </select>
+        <input name="community" placeholder="Community or building" />
+      </div>
+
+      <div className="hh-form-row">
+        <select name="bedrooms" defaultValue="">
+          <option value="" disabled>Bedrooms</option>
+          <option>Studio</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5+</option>
+        </select>
+        <select name="furnishing" defaultValue="">
+          <option value="" disabled>Furnishing status</option>
+          <option>Fully furnished</option>
+          <option>Partly furnished</option>
+          <option>Unfurnished</option>
+        </select>
+      </div>
+
+      <div className="hh-form-row">
+        <select name="currentStatus" defaultValue="">
+          <option value="" disabled>Current status</option>
+          <option>Vacant</option>
+          <option>Tenanted (long-term)</option>
+          <option>Owner occupied</option>
+          <option>Listed short-term, self-managed</option>
+          <option>Off-plan / under construction</option>
+        </select>
+        <select name="ownerUse" defaultValue="">
+          <option value="" disabled>Will you use the property yourself?</option>
+          <option>Yes, regularly</option>
+          <option>Occasionally</option>
+          <option>No</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+
+      <textarea name="notes" rows="4" placeholder="Anything we should know?" />
+
+      <button type="submit" className="hh-btn hh-btn-gold" disabled={status === "sending"}>
+        {status === "sending" ? "Sending..." : "Send My Details"}
+      </button>
+
+      <p className="hh-consent">
+        By submitting this form you agree to be contacted by Vibrant Vacation
+        Homes Rental regarding your property. We never share your details
+        with third parties.
+      </p>
+    </form>
+  );
+}
+
+function HolidayHomes() {
+  return (
+    <>
+      <Header />
+
+      <main className="hh-page">
+
+        {/* HERO */}
+        <section className="hh-hero">
+          <div className="hh-hero-bg" style={{ backgroundImage: `url("${HH_IMAGES.hero}")` }} />
+          <div className="hh-hero-shade" />
+
+          <div className="wrap hh-hero-content">
+            <p className="hh-eyebrow">
+              Vibrant Vacation Homes Rental · Part of the Golden Key group
+            </p>
+            <h1 className="serif">Your Dubai property, hosted properly</h1>
+            <p className="hh-hero-text">
+              Vibrant Vacation Homes Rental manages holiday homes and
+              short-term rentals across Dubai — listings, pricing, guests,
+              cleaning, and licensing. You keep the keys and the flexibility.
+              We handle everything else.
+            </p>
+
+            <div className="hh-actions">
+              <a href="#hh-form" className="hh-btn hh-btn-gold">Get My Free Assessment</a>
+              <a href={HH_TEL} className="hh-btn hh-btn-ghost">Talk to Our Team</a>
+            </div>
+
+            <ul className="hh-trust">
+              <li>Fully managed</li>
+              <li>DTCM compliant</li>
+              <li>Use your property whenever you like</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* INTRO */}
+        <section className="section">
+          <div className="wrap hh-split">
+            <div className="hh-split-image">
+              <img src={HH_IMAGES.intro} alt="Furnished holiday home in Dubai" loading="lazy" />
+            </div>
+            <div>
+              <p className="hh-eyebrow dark">Why a specialist</p>
+              <h2 className="serif">Short-term letting is a hospitality business, not a lease</h2>
+              <p>
+                An annual tenancy is signed once and reviewed once a year. A
+                holiday home turns over constantly — new guests, new
+                expectations, new reviews, every week. Listings need
+                adjusting. Rates need moving with the season. Messages need
+                answering at ten at night, because the guest deciding between
+                your property and another one won't wait until morning.
+              </p>
+              <p>
+                That's why Vibrant exists as its own company within the Golden
+                Key group. Short-term rental deserves a team that does nothing
+                else.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* SERVICES */}
+        <section className="section hh-tinted">
+          <div className="wrap">
+            <div className="hh-head">
+              <p className="hh-eyebrow dark">What's included</p>
+              <h2 className="serif">Everything a guest sees, and everything they don't</h2>
+              <p>Your property runs as a fully managed holiday home. Here's what that covers.</p>
+            </div>
+
+            <div className="hh-grid hh-grid-3">
+              {HH_SERVICES.map(([title, text], i) => (
+                <article className="hh-card" key={title}>
+                  <span className="hh-num">{String(i + 1).padStart(2, "0")}</span>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* WHY OWNERS */}
+        <section className="section hh-dark">
+          <div className="wrap">
+            <div className="hh-head">
+              <p className="hh-eyebrow">Why owners hand us the keys</p>
+              <h2 className="serif">Built around what actually drives results</h2>
+            </div>
+
+            <div className="hh-grid hh-grid-3">
+              {HH_REASONS.map(([title, text]) => (
+                <article className="hh-reason" key={title}>
+                  <h3 className="serif">{title}</h3>
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SUITABILITY */}
+        <section className="section">
+          <div className="wrap">
+            <div className="hh-head">
+              <p className="hh-eyebrow dark">An honest view</p>
+              <h2 className="serif">Is your property right for holiday homes?</h2>
+              <p>
+                Not every property performs well on short stays, and we'd
+                rather tell you that at the start than after you've furnished it.
+              </p>
+            </div>
+
+            <div className="hh-fit">
+              <div className="hh-fit-col good">
+                <h3>Strong candidates</h3>
+                <ul>
+                  {HH_GOOD_FIT.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </div>
+              <div className="hh-fit-col long">
+                <h3>Usually better on a long-term lease</h3>
+                <ul>
+                  {HH_LONG_TERM.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </div>
+            </div>
+
+            <div className="hh-fit-note">
+              <p>
+                Not sure where your property falls? Send us the details and
+                we'll give you a straight answer — including when the honest
+                answer is that a long-term lease suits it better. Our sister
+                company, Golden Key Real Estate, handles that side.
+              </p>
+              <a href="#hh-form" className="hh-btn hh-btn-gold">Check My Property</a>
+            </div>
+          </div>
+        </section>
+
+        {/* PROCESS */}
+        <section className="section hh-tinted">
+          <div className="wrap">
+            <div className="hh-head">
+              <p className="hh-eyebrow dark">How it works</p>
+              <h2 className="serif">From enquiry to first guest</h2>
+            </div>
+
+            <div className="hh-grid hh-grid-4">
+              {HH_STEPS.map(([title, text], i) => (
+                <article className="hh-step" key={title}>
+                  <span className="hh-step-label">Step {String(i + 1).padStart(2, "0")}</span>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FORM */}
+        <section className="section" id="hh-form">
+          <div className="wrap hh-form-grid">
+            <div>
+              <p className="hh-eyebrow dark">Free assessment</p>
+              <h2 className="serif">Tell us about your property</h2>
+              <p>Share a few details and we'll come back with an honest assessment and a proposal.</p>
+              <div className="hh-form-image">
+                <img src={HH_IMAGES.form} alt="Holiday home interior" loading="lazy" />
+              </div>
+            </div>
+
+            <HolidayHomesForm />
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="section hh-tinted">
+          <div className="wrap hh-faq-wrap">
+            <div className="hh-head">
+              <p className="hh-eyebrow dark">FAQ</p>
+              <h2 className="serif">Frequently asked questions</h2>
+            </div>
+
+            <div className="hh-faq">
+              {HH_FAQS.map(([q, a]) => (
+                <details key={q}>
+                  <summary>{q}</summary>
+                  <p>{a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FINAL CTA */}
+        <section className="hh-cta">
+          <div className="wrap hh-cta-inner">
+            <h2 className="serif">Let your property earn while you get your time back</h2>
+            <p>
+              Tell us about your property and we'll give you an honest
+              assessment — including whether short-term is the right route
+              for it at all. No cost, no obligation.
+            </p>
+            <div className="hh-actions centered">
+              <a href="#hh-form" className="hh-btn hh-btn-gold">Get My Free Assessment</a>
+              <a href={HH_TEL} className="hh-btn hh-btn-ghost">Call Us</a>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <Footer />
+    </>
+  );
+}
 // ---------------------------------------------------------------------------------------------------------------
 function App() {
   const path =
@@ -9110,53 +9539,7 @@ if (path === "/services/property-valuation") {
 }
 
 if (path === "/services/holiday-home-services") {
-  return (
-    <ServiceDetail
-      eyebrow="Holiday Home Services"
-      title="Make short-term property ownership simpler"
-      description="Support for owners who want their holiday home presented, managed and cared for while they are away."
-      image="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1800&q=90"
-      sections={[
-        {
-          eyebrow: "PRESENTATION",
-          title: "Make every stay count",
-          text: "Strong presentation, guest-ready standards and thoughtful property care help create a better experience for both owners and guests.",
-          image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=88",
-        },
-        {
-          eyebrow: "MANAGEMENT",
-          title: "More convenience, less operational work",
-          text: "We help coordinate the practical side of short-term stays so owners can enjoy greater visibility without being involved in every detail.",
-          image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=88",
-        },
-      ]}
-    />
-  );
-}
-
-if (path === "/services/citizenship-program") {
-  return (
-    <ServiceDetail
-      eyebrow="Citizenship Program"
-      title="Property-led pathways for your next chapter"
-      description="Explore international mobility and investment opportunities through a structured property advisory experience."
-      image="https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=1800&q=90"
-      sections={[
-        {
-          eyebrow: "ADVISORY",
-          title: "Understand the opportunity",
-          text: "We help clients understand the property and investment side of international mobility opportunities, with a focus on clarity and informed decisions.",
-          image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=88",
-        },
-        {
-          eyebrow: "GUIDANCE",
-          title: "A more considered journey",
-          text: "From initial questions to selecting suitable opportunities, our team helps simplify the process and connect you with the right next steps.",
-          image: "https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=1200&q=88",
-        },
-      ]}
-    />
-  );
+  return <HolidayHomes />;
 }
 
   // INSIGHTS

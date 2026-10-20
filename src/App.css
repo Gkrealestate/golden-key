@@ -9384,3 +9384,499 @@ body,
     height: 280px;
   }
 }
+
+/* =========================================================
+   HOLIDAY HOMES PAGE (Vibrant Vacation Homes Rental)
+   All classes start with .hh- so nothing else is affected.
+   ========================================================= */
+.hh-page {
+  --hh-gold: #c9a227;
+  --hh-gold-deep: #8f6b12;
+  --hh-ink: #171717;
+  --hh-muted: #6f6a5e;
+  --hh-line: #e6dfcd;
+  --hh-tint: #f6f2e8;
+  --hh-dark: #0d0d0d;
+  color: var(--hh-ink);
+}
+
+.hh-page h2.serif {
+  font-size: clamp(30px, 3.6vw, 44px);
+  line-height: 1.15;
+  margin: 8px 0 16px;
+  color: var(--hh-ink);
+}
+
+.hh-page p {
+  color: var(--hh-muted);
+}
+
+.hh-eyebrow {
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--hh-gold);
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.hh-eyebrow.dark {
+  color: var(--hh-gold-deep);
+}
+
+/* Buttons */
+.hh-btn {
+  display: inline-block;
+  padding: 14px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s;
+}
+
+.hh-btn-gold {
+  background: var(--hh-gold);
+  color: #111;
+}
+
+.hh-btn-gold:hover {
+  background: #b38d1b;
+}
+
+.hh-btn-gold:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.hh-btn-ghost {
+  border-color: rgba(255,255,255,.7);
+  color: #fff;
+}
+
+.hh-btn-ghost:hover {
+  background: #fff;
+  color: #111;
+}
+
+.hh-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hh-actions.centered {
+  justify-content: center;
+}
+
+/* Hero */
+.hh-hero {
+  position: relative;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hh-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.hh-hero-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.45) 60%, rgba(0,0,0,.2) 100%);
+}
+
+.hh-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 80px 0;
+}
+
+.hh-hero-content h1.serif {
+  color: #fff;
+  font-size: clamp(40px, 5.4vw, 68px);
+  line-height: 1.05;
+  max-width: 760px;
+  margin: 0 0 20px;
+}
+
+.hh-page .hh-hero-text {
+  color: rgba(255,255,255,.86);
+  max-width: 600px;
+  font-size: 17px;
+  margin: 0 0 30px;
+}
+
+.hh-trust {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  color: rgba(255,255,255,.8);
+  font-size: 13px;
+}
+
+.hh-trust li::before {
+  content: "✓";
+  color: var(--hh-gold);
+  margin-right: 7px;
+}
+
+/* Section helpers */
+.hh-tinted {
+  background: var(--hh-tint);
+}
+
+.hh-head {
+  max-width: 720px;
+  margin-bottom: 42px;
+}
+
+.hh-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.hh-split-image {
+  height: 480px;
+}
+
+.hh-split-image img,
+.hh-form-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Grids & cards */
+.hh-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.hh-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.hh-grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+.hh-card {
+  background: #fff;
+  border: 1px solid var(--hh-line);
+  padding: 28px 26px;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.hh-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.07);
+}
+
+.hh-num {
+  display: block;
+  font-size: 12px;
+  color: var(--hh-gold-deep);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.hh-card h3,
+.hh-step h3 {
+  font-size: 17px;
+  margin: 0 0 10px;
+  color: var(--hh-ink);
+}
+
+.hh-card p,
+.hh-step p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Dark "why owners" section */
+.hh-dark {
+  background: var(--hh-dark);
+}
+
+.hh-page .hh-dark h2.serif {
+  color: #fff;
+}
+
+.hh-reason {
+  border-top: 2px solid var(--hh-gold);
+  padding-top: 22px;
+}
+
+.hh-page .hh-reason h3.serif {
+  color: #fff;
+  font-size: 22px;
+  margin: 0 0 12px;
+}
+
+.hh-page .hh-reason p {
+  color: rgba(255,255,255,.72);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Suitability */
+.hh-fit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.hh-fit-col {
+  padding: 32px;
+  border: 1px solid var(--hh-line);
+  background: #fff;
+}
+
+.hh-fit-col.good {
+  border-top: 4px solid var(--hh-gold);
+}
+
+.hh-fit-col.long {
+  border-top: 4px solid #9a9488;
+}
+
+.hh-fit-col h3 {
+  margin: 0 0 18px;
+  font-size: 19px;
+}
+
+.hh-fit-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hh-fit-col li {
+  padding: 9px 0 9px 28px;
+  position: relative;
+  border-bottom: 1px solid #f0ebde;
+  font-size: 15px;
+}
+
+.hh-fit-col li:last-child {
+  border-bottom: 0;
+}
+
+.hh-fit-col.good li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--hh-gold-deep);
+  font-weight: 700;
+}
+
+.hh-fit-col.long li::before {
+  content: "–";
+  position: absolute;
+  left: 2px;
+  color: #9a9488;
+  font-weight: 700;
+}
+
+.hh-fit-note {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 26px 30px;
+  background: var(--hh-tint);
+}
+
+.hh-fit-note p {
+  margin: 0;
+  max-width: 720px;
+}
+
+/* Process */
+.hh-step {
+  background: #fff;
+  padding: 28px 24px;
+  border: 1px solid var(--hh-line);
+}
+
+.hh-step-label {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--hh-gold-deep);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* Form */
+.hh-form-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.hh-form-image {
+  height: 300px;
+  margin-top: 26px;
+}
+
+.hh-form {
+  display: grid;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid var(--hh-line);
+  padding: 32px;
+}
+
+.hh-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.hh-form input,
+.hh-form select,
+.hh-form textarea {
+  width: 100%;
+  border: 1px solid var(--hh-line);
+  background: #fdfcf9;
+  padding: 13px 14px;
+  font-size: 14px;
+  color: var(--hh-ink);
+  border-radius: 0;
+}
+
+.hh-form input:focus,
+.hh-form select:focus,
+.hh-form textarea:focus {
+  outline: none;
+  border-color: var(--hh-gold);
+}
+
+.hh-form .hh-btn {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.hh-page .hh-consent {
+  font-size: 12px;
+  margin: 4px 0 0;
+}
+
+.hh-success {
+  background: #fff;
+  border: 1px solid var(--hh-line);
+  border-top: 4px solid var(--hh-gold);
+  padding: 36px 32px;
+}
+
+.hh-success h3.serif {
+  font-size: 26px;
+  margin: 0 0 12px;
+}
+
+.hh-success a {
+  color: var(--hh-gold-deep);
+  font-weight: 600;
+}
+
+/* FAQ */
+.hh-faq-wrap {
+  max-width: 900px;
+}
+
+.hh-faq details {
+  background: #fff;
+  border: 1px solid var(--hh-line);
+  margin-bottom: 10px;
+}
+
+.hh-faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 20px 56px 20px 24px;
+  font-weight: 600;
+  position: relative;
+}
+
+.hh-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.hh-faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: var(--hh-gold-deep);
+}
+
+.hh-faq details[open] summary::after {
+  content: "–";
+}
+
+.hh-faq details p {
+  padding: 0 24px 22px;
+  margin: 0;
+}
+
+/* Final CTA */
+.hh-cta {
+  background: var(--hh-dark);
+  padding: 90px 0;
+  text-align: center;
+}
+
+.hh-cta-inner {
+  max-width: 760px;
+}
+
+.hh-page .hh-cta h2.serif {
+  color: #fff;
+}
+
+.hh-page .hh-cta p {
+  color: rgba(255,255,255,.75);
+  margin: 0 auto 30px;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .hh-grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .hh-grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 760px) {
+  .hh-hero { min-height: 560px; }
+  .hh-split,
+  .hh-fit,
+  .hh-form-grid,
+  .hh-form-row,
+  .hh-grid-3,
+  .hh-grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .hh-split { gap: 32px; }
+  .hh-split-image { height: 300px; }
+  .hh-form-image { display: none; }
+  .hh-form { padding: 22px; }
+  .hh-fit-note {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hh-cta { padding: 64px 0; }
+}
+

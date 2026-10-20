@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Dubai Eiendomsmesse — Oslo | Danube Properties × Golden Key</title>
+<meta name="description" content="Møt Danube Properties og Golden Key Real Estate i Oslo 31. oktober og 1. november 2026. Betalingsplaner fra 0,5 % per måned. Begrenset antall plasser.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Dubai Eiendomsmesse — Oslo, 31. okt – 1. nov 2026">
+<meta property="og:description" content="Møt Danube Properties og Golden Key Real Estate på Radisson Blu Scandinavia. Betalingsplaner fra 0,5 % per måned.">
+<meta property="og:type" content="website">
+<!-- <meta property="og:image" content="/og-image.jpg"> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   CONFIG NOTE FOR DEVELOPER
+   Edit the CONFIG block in the <script> at the bottom of this
+   file: form endpoint, WhatsApp number, Meta Pixel ID.
+   ============================================================ */
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --navy:#0B1626;
+  --navy-2:#122238;
+  --navy-3:#1B3150;
+  --gold:#C9A227;
+  --gold-l:#E3C766;
+  --gold-d:#A8871B;
+  --cream:#F7F4ED;
+  --white:#FFFFFF;
+  --ink:#16202E;
+  --muted:#6F7C8C;
+  --line:rgba(255,255,255,.14);
+  --line-d:#E3E7EC;
+  --ok:#1E8E5A;
+  --err:#C0392B;
+  --radius:14px;
+  --maxw:1180px;
+}
+
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:var(--cream); color:var(--ink);
+  line-height:1.6; font-size:16px; overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+
+/* ---------------- TOP BAR ---------------- */
+.topbar{
+  position:sticky;top:0;z-index:60;
+  background:rgba(11,22,38,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-in{
+  max-width:var(--maxw);margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.brands{display:flex;align-items:center;gap:14px;min-width:0}
+.brand-mark{
+  font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;
+  color:var(--gold-l);letter-spacing:.5px;line-height:1;white-space:nowrap;
+}
+.brand-sep{width:1px;height:24px;background:var(--line);flex:none}
+.brand-txt{
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  color:#9FB0C4;font-weight:600;line-height:1.3;
+}
+.topbar-right{display:flex;align-items:center;gap:10px;flex:none}
+.langs{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.langs button{
+  background:transparent;border:0;cursor:pointer;
+  font-family:inherit;font-size:11px;font-weight:700;letter-spacing:.08em;
+  color:#9FB0C4;padding:6px 11px;transition:.2s;
+}
+.langs button.on{background:var(--gold);color:var(--navy)}
+.top-cta{
+  display:none;background:var(--gold);color:var(--navy);
+  font-weight:700;font-size:13px;text-decoration:none;
+  padding:9px 18px;border-radius:999px;white-space:nowrap;transition:.2s;
+}
+.top-cta:hover{background:var(--gold-l)}
+@media(min-width:860px){.top-cta{display:inline-block}}
+
+/* ---------------- HERO ---------------- */
+.hero{
+  position:relative;
+  background:
+    linear-gradient(102deg,rgba(8,17,28,.97) 0%,rgba(10,20,34,.90) 40%,rgba(11,22,38,.60) 72%,rgba(11,22,38,.74) 100%),
+    url('/oslo/img/dubai-skyline.jpg') center 62%/cover no-repeat,
+    linear-gradient(145deg,#0B1626 0%,#15263D 45%,#0A1420 100%);
+  color:#fff;padding:56px 0 64px;
+}
+@media(max-width:979px){
+  .hero{
+    background:
+      linear-gradient(180deg,rgba(8,17,28,.90) 0%,rgba(10,20,34,.93) 46%,rgba(9,19,31,.97) 100%),
+      url('/oslo/img/dubai-skyline.jpg') center/cover no-repeat,
+      linear-gradient(145deg,#0B1626,#15263D 45%,#0A1420);
+  }
+}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
+@media(min-width:980px){
+  .hero{padding:72px 0 80px}
+  .hero-grid{grid-template-columns:1.08fr .92fr;gap:56px}
+}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  border:1px solid rgba(201,162,39,.45);border-radius:999px;
+  padding:6px 15px;margin-bottom:22px;
+  font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold-l);background:rgba(201,162,39,.08);
+}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none;
+  animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+
+h1{
+  font-family:'Cormorant Garamond',serif;font-weight:700;
+  font-size:clamp(38px,7.4vw,66px);line-height:1.04;letter-spacing:-.5px;
+  margin-bottom:18px;
+}
+h1 .hl{color:var(--gold-l);display:block}
+.lede{
+  font-size:clamp(15px,2.1vw,18px);color:#C3D0DE;max-width:38em;margin-bottom:28px;
+}
+
+.facts{
+  display:grid;grid-template-columns:1fr;gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;margin-bottom:28px;
+}
+@media(min-width:560px){.facts{grid-template-columns:1fr 1fr}}
+.fact{background:rgba(255,255,255,.035);padding:16px 18px;display:flex;gap:13px;align-items:flex-start}
+.fact svg{flex:none;margin-top:2px}
+.fact-k{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8FA2B8;font-weight:700;margin-bottom:3px}
+.fact-v{font-size:14.5px;font-weight:600;color:#fff;line-height:1.4}
+.fact-v small{display:block;font-weight:400;font-size:12.5px;color:#9FB0C4;margin-top:2px}
+
+/* countdown */
+.countdown{margin-bottom:26px}
+.cd-label{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#8FA2B8;font-weight:700;margin-bottom:10px}
+.cd-row{display:flex;gap:9px}
+.cd-cell{
+  flex:1;background:rgba(255,255,255,.05);border:1px solid var(--line);
+  border-radius:10px;padding:11px 6px;text-align:center;
+}
+.cd-num{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,5vw,32px);font-weight:700;color:var(--gold-l);line-height:1}
+.cd-unit{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#8FA2B8;font-weight:600;margin-top:5px}
+
+.usp-list{list-style:none;display:grid;gap:11px}
+.usp-list li{display:flex;gap:11px;align-items:flex-start;font-size:15px;color:#D6E0EA}
+.usp-list .tick{
+  flex:none;width:19px;height:19px;border-radius:50%;background:rgba(201,162,39,.16);
+  display:grid;place-items:center;margin-top:2px;
+}
+
+/* ---------------- FORM CARD ---------------- */
+.card{
+  background:var(--white);border-radius:18px;padding:28px 24px;
+  box-shadow:0 24px 60px rgba(0,0,0,.34);
+}
+@media(min-width:980px){.card{padding:34px 32px;position:sticky;top:84px}}
+.card-top{text-align:center;margin-bottom:22px}
+.card-kicker{
+  font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold-d);font-weight:700;margin-bottom:8px;
+}
+.card h2{
+  font-family:'Cormorant Garamond',serif;font-size:29px;font-weight:700;
+  color:var(--navy);line-height:1.15;margin-bottom:9px;
+}
+.card-sub{font-size:14px;color:var(--muted);line-height:1.55}
+
+.field{margin-bottom:15px}
+label{display:block;font-size:12.5px;font-weight:600;color:var(--navy);margin-bottom:6px}
+input[type=text],input[type=tel]{
+  width:100%;font-family:inherit;font-size:16px;color:var(--ink);
+  padding:13px 15px;border:1.5px solid var(--line-d);border-radius:10px;
+  background:#FCFDFE;transition:.18s;
+}
+input:focus{outline:none;border-color:var(--gold);background:#fff;box-shadow:0 0 0 3px rgba(201,162,39,.14)}
+input::placeholder{color:#A9B4C0}
+.phone-wrap{display:flex;gap:8px}
+.cc{
+  flex:none;width:76px;display:grid;place-items:center;
+  border:1.5px solid var(--line-d);border-radius:10px;background:#F2F5F8;
+  font-size:14.5px;font-weight:600;color:var(--navy);
+}
+.phone-wrap input{flex:1;min-width:0}
+
+.consent{display:flex;gap:10px;align-items:flex-start;margin:16px 0 18px}
+.consent input{flex:none;width:17px;height:17px;margin-top:2px;accent-color:var(--gold-d);cursor:pointer}
+.consent label{font-size:12px;line-height:1.5;color:var(--muted);font-weight:400;margin:0;cursor:pointer}
+
+.btn{
+  width:100%;border:0;cursor:pointer;font-family:inherit;
+  background:linear-gradient(135deg,var(--gold) 0%,var(--gold-d) 100%);
+  color:var(--navy);font-size:16px;font-weight:700;letter-spacing:.01em;
+  padding:16px;border-radius:10px;transition:.2s;
+  box-shadow:0 6px 18px rgba(201,162,39,.3);
+}
+.btn:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 10px 26px rgba(201,162,39,.4)}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+.card-foot{text-align:center;font-size:11.5px;color:#9AA6B4;margin-top:13px;line-height:1.5}
+
+.msg{display:none;padding:13px 15px;border-radius:10px;font-size:14px;margin-bottom:15px;line-height:1.5}
+.msg.err{display:block;background:#FDEDEB;color:var(--err);border:1px solid #F3C9C3}
+
+.success{display:none;text-align:center;padding:16px 0}
+.success.on{display:block}
+.success .ico{
+  width:62px;height:62px;border-radius:50%;background:#E4F3EB;
+  display:grid;place-items:center;margin:0 auto 18px;
+}
+.success h3{font-family:'Cormorant Garamond',serif;font-size:27px;color:var(--navy);margin-bottom:11px}
+.success p{font-size:14.5px;color:var(--muted);margin-bottom:20px;line-height:1.6}
+.success .again{
+  display:inline-block;font-size:13px;color:var(--gold-d);
+  text-decoration:underline;cursor:pointer;background:none;border:0;font-family:inherit;
+}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+
+/* ---------------- SECTIONS ---------------- */
+section{padding:66px 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 44px}
+.sec-kicker{
+  font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold-d);font-weight:700;margin-bottom:12px;
+}
+h2.sec-title{
+  font-family:'Cormorant Garamond',serif;font-weight:700;
+  font-size:clamp(29px,4.6vw,44px);line-height:1.12;color:var(--navy);
+  letter-spacing:-.3px;margin-bottom:14px;
+}
+.sec-head p{font-size:16px;color:var(--muted)}
+
+.grid-3{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:720px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+.tile{
+  background:#fff;border:1px solid var(--line-d);border-radius:var(--radius);
+  padding:30px 26px;transition:.22s;
+}
+.tile:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(11,22,38,.09);border-color:#D3DAE2}
+.tile .ico{
+  width:46px;height:46px;border-radius:11px;
+  background:linear-gradient(135deg,rgba(201,162,39,.16),rgba(201,162,39,.06));
+  display:grid;place-items:center;margin-bottom:17px;
+}
+.tile h3{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:9px}
+.tile p{font-size:14.5px;color:var(--muted);line-height:1.6}
+
+/* highlight band */
+.band{background:var(--navy);color:#fff;padding:56px 0}
+.band-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+@media(min-width:720px){.band-grid{grid-template-columns:repeat(3,1fr)}}
+.band-cell{background:var(--navy-2);padding:30px 26px;text-align:center}
+.band-num{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:700;color:var(--gold-l);line-height:1;margin-bottom:9px}
+.band-lab{font-size:13.5px;color:#A8BACE;line-height:1.5}
+
+/* venue */
+.venue{background:#fff}
+.venue-grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+@media(min-width:900px){.venue-grid{grid-template-columns:1fr 1fr;gap:52px}}
+.venue-photo{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line-d);min-width:0}
+.venue-photo img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.venue-photo figcaption{padding:14px 18px;background:#fff;font-size:13px;color:var(--muted);border-top:1px solid var(--line-d)}
+/* projects gallery */
+.sec-head-d h2.sec-title{color:#fff}
+.sec-head-d .sec-kicker{color:var(--gold-l)}
+.sec-head-d p{color:#A8BACE}
+.gallery{display:grid;grid-template-columns:1fr;gap:18px;margin-bottom:40px}
+@media(min-width:720px){.gallery{grid-template-columns:1fr 1fr}}
+.gcard{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--navy-2);min-width:0}
+.gcard img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.gcap{padding:15px 18px}
+.gcap-t{font-size:15px;font-weight:600;color:#fff;margin-bottom:3px}
+.gcap-s{font-size:13px;color:#8FA2B8}
+.venue h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4.2vw,40px);
+  font-weight:700;color:var(--navy);line-height:1.14;margin-bottom:18px}
+.venue-rows{display:grid;gap:16px;margin-bottom:26px}
+.vrow{display:flex;gap:14px;align-items:flex-start}
+.vrow .ico{
+  flex:none;width:40px;height:40px;border-radius:10px;background:#F4F6F9;
+  display:grid;place-items:center;
+}
+.vrow-k{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:3px}
+.vrow-v{font-size:15.5px;font-weight:600;color:var(--navy);line-height:1.45}
+.vrow-v small{display:block;font-weight:400;font-size:13.5px;color:var(--muted);margin-top:2px}
+
+.btn-ghost{
+  display:inline-block;border:1.5px solid var(--navy);border-radius:10px;
+  padding:13px 26px;font-size:14.5px;font-weight:700;color:var(--navy);
+  text-decoration:none;transition:.2s;
+}
+.btn-ghost:hover{background:var(--navy);color:#fff}
+
+/* final cta */
+.final{
+  background:linear-gradient(145deg,#0B1626 0%,#15263D 50%,#0A1420 100%);
+  color:#fff;text-align:center;padding:72px 0;
+}
+.final h2{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,5vw,48px);
+  font-weight:700;line-height:1.12;margin-bottom:16px}
+.final h2 .hl{color:var(--gold-l)}
+.final p{font-size:16.5px;color:#BCC9D8;max-width:46em;margin:0 auto 30px}
+.btn-lg{
+  display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold-d));
+  color:var(--navy);font-size:17px;font-weight:700;text-decoration:none;
+  padding:17px 44px;border-radius:999px;transition:.2s;
+  box-shadow:0 10px 30px rgba(201,162,39,.32);
+}
+.btn-lg:hover{transform:translateY(-2px);box-shadow:0 14px 38px rgba(201,162,39,.44)}
+.final .note{font-size:13px;color:#8FA2B8;margin-top:17px}
+
+/* footer */
+footer{background:#070F1A;color:#8FA2B8;padding:46px 0 34px;font-size:13.5px}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:28px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08)}
+@media(min-width:760px){.foot-grid{grid-template-columns:1.3fr 1fr 1fr}}
+footer .brand-mark{font-size:30px;margin-bottom:11px}
+footer h4{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#fff;font-weight:700;margin-bottom:13px}
+footer a{color:#8FA2B8;text-decoration:none;transition:.2s}
+footer a:hover{color:var(--gold-l)}
+footer ul{list-style:none;display:grid;gap:8px}
+.foot-base{padding-top:22px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:12px;color:#637891}
+
+/* sticky mobile cta */
+.sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:70;
+  background:rgba(11,22,38,.96);backdrop-filter:blur(10px);
+  border-top:1px solid var(--line);padding:11px 16px;
+  display:flex;gap:12px;align-items:center;
+  transform:translateY(110%);transition:transform .28s ease;
+}
+.sticky.on{transform:translateY(0)}
+@media(min-width:980px){.sticky{display:none}}
+.sticky-txt{flex:1;min-width:0}
+.sticky-k{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8FA2B8;font-weight:700}
+.sticky-v{font-size:13.5px;font-weight:600;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sticky a{
+  flex:none;background:var(--gold);color:var(--navy);font-weight:700;font-size:14px;
+  text-decoration:none;padding:12px 22px;border-radius:999px;
+}
+body{padding-bottom:0}
+@media(max-width:979px){body.has-sticky{padding-bottom:72px}}
+</style>
+</head>
+<body>
+
+<!-- ======================= TOP BAR ======================= -->
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="brands">
+      <span class="brand-mark">GK</span>
+      <span class="brand-sep"></span>
+      <span class="brand-txt" data-i18n="brandTag">Golden Key<br>× Danube Properties</span>
+    </div>
+    <div class="topbar-right">
+      <div class="langs">
+        <button id="btnNo" class="on" onclick="setLang('no')">NO</button>
+        <button id="btnEn" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="#register" class="top-cta" data-i18n="navCta">Meld deg på</a>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= HERO ======================= -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+
+    <div>
+      <div class="eyebrow">
+        <span class="dot"></span>
+        <span data-i18n="eyebrow">Kun to dager · Oslo</span>
+      </div>
+
+      <h1>
+        <span data-i18n="h1a">Dubai kommer</span>
+        <span class="hl" data-i18n="h1b">til Oslo</span>
+      </h1>
+
+      <p class="lede" data-i18n="lede">
+        Danube Properties og Golden Key Real Estate møter deg ansikt til ansikt
+        med plantegninger, ledige enheter og priser — og tilbud som kun gis
+        under arrangementet.
+      </p>
+
+      <div class="facts">
+        <div class="fact">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          <div>
+            <div class="fact-k" data-i18n="factDateK">Dato</div>
+            <div class="fact-v" data-i18n="factDateV">31. oktober &amp; 1. november 2026<small>Lørdag og søndag</small></div>
+          </div>
+        </div>
+        <div class="fact">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.8" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <div class="fact-k" data-i18n="factVenueK">Sted</div>
+            <div class="fact-v" data-i18n="factVenueV">Radisson Blu Scandinavia<small>Holbergs gate 30, 0166 Oslo</small></div>
+          </div>
+        </div>
+        <div class="fact">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h5M9.5 14.5h5"/></svg>
+          <div>
+            <div class="fact-k" data-i18n="factPayK">Betalingsplan</div>
+            <div class="fact-v" data-i18n="factPayV">Fra 0,5 % per måned<small>Fleksible planer</small></div>
+          </div>
+        </div>
+        <div class="fact">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="1.8" stroke-linecap="round"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 21V7M12 7H7.5a2.5 2.5 0 110-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 100-5C13 2 12 7 12 7z"/></svg>
+          <div>
+            <div class="fact-k" data-i18n="factOfferK">Tilbud</div>
+            <div class="fact-v" data-i18n="factOfferV">Eksklusivt på messen<small>Ikke tilgjengelig senere</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="countdown">
+        <div class="cd-label" data-i18n="cdLabel">Det er igjen</div>
+        <div class="cd-row">
+          <div class="cd-cell"><div class="cd-num" id="cdD">00</div><div class="cd-unit" data-i18n="cdD">Dager</div></div>
+          <div class="cd-cell"><div class="cd-num" id="cdH">00</div><div class="cd-unit" data-i18n="cdH">Timer</div></div>
+          <div class="cd-cell"><div class="cd-num" id="cdM">00</div><div class="cd-unit" data-i18n="cdM">Min</div></div>
+          <div class="cd-cell"><div class="cd-num" id="cdS">00</div><div class="cd-unit" data-i18n="cdS">Sek</div></div>
+        </div>
+      </div>
+
+      <ul class="usp-list">
+        <li><span class="tick"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#E3C766" stroke-width="3.2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="usp1">Snakk direkte med teamet som selger enhetene</span></li>
+        <li><span class="tick"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#E3C766" stroke-width="3.2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="usp2">100 % utenlandsk eierskap — ingen flyreise nødvendig</span></li>
+        <li><span class="tick"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#E3C766" stroke-width="3.2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span><span data-i18n="usp3">Begrenset antall plasser — hvert møte er en-til-en</span></li>
+      </ul>
+    </div>
+
+    <!-- ---------- FORM ---------- -->
+    <div class="card" id="register">
+      <div id="formView">
+        <div class="card-top">
+          <div class="card-kicker" data-i18n="formKicker">Meld deg på</div>
+          <h2 data-i18n="formTitle">Book din plass</h2>
+          <p class="card-sub" data-i18n="formSub">Legg igjen navn og telefonnummer. Vi ringer deg, avtaler tidspunkt og sender detaljene på SMS.</p>
+        </div>
+
+        <div class="msg" id="msgErr"></div>
+
+        <form id="leadForm" novalidate>
+          <input type="text" class="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="field">
+            <label for="fname" data-i18n="lblName">Fullt navn</label>
+            <input type="text" id="fname" name="name" autocomplete="name" data-i18n-ph="phName" placeholder="Ola Nordmann" required>
+          </div>
+
+          <div class="field">
+            <label for="fphone" data-i18n="lblPhone">Telefonnummer</label>
+            <div class="phone-wrap">
+              <div class="cc">+47</div>
+              <input type="tel" id="fphone" name="phone" autocomplete="tel" inputmode="numeric" data-i18n-ph="phPhone" placeholder="400 00 000" required>
+            </div>
+          </div>
+
+          <div class="consent">
+            <input type="checkbox" id="fconsent" name="consent" required>
+            <label for="fconsent" data-i18n="consent">Jeg samtykker til at Golden Key Real Estate kontakter meg på telefon eller SMS om dette arrangementet.</label>
+          </div>
+
+          <button type="submit" class="btn" id="submitBtn" data-i18n="btnSubmit">Book min plass</button>
+
+          <p class="card-foot" data-i18n="formFoot">Navn og telefonnummer brukes kun til å kontakte deg om arrangementet i Oslo. Deles ikke med tredjeparter.</p>
+        </form>
+      </div>
+
+      <div class="success" id="successView">
+        <div class="ico">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1E8E5A" stroke-width="2.6" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h3 data-i18n="okTitle">Takk! Plassen din er registrert</h3>
+        <p data-i18n="okBody">Vi ringer deg innen 24 timer for å avtale tidspunkt. Arrangementet holdes på Radisson Blu Scandinavia Hotel, Holbergs gate 30, Oslo.</p>
+        <a class="btn-ghost" id="mapBtn" href="https://maps.google.com/?q=Radisson+Blu+Scandinavia+Hotel+Holbergs+gate+30+Oslo" target="_blank" rel="noopener" data-i18n="okMap">Se veibeskrivelse</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ======================= WHY ATTEND ======================= -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker" data-i18n="whyKicker">Hvorfor komme</div>
+      <h2 class="sec-title" data-i18n="whyTitle">Alt du trenger å vite, i ett møte</h2>
+      <p data-i18n="whySub">Ingen flyreise. Ingen rådgiver på en skjerm. Sett deg ned med dem som faktisk selger enhetene.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="tile">
+        <div class="ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="#A8871B" stroke-width="1.7" stroke-linecap="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h2M9 13h2M9 17h2M15 9h-2M15 13h-2M15 17h-2"/></svg></div>
+        <h3 data-i18n="t1h">Plantegninger og ledige enheter</h3>
+        <p data-i18n="t1p">Se de faktiske enhetene som er tilgjengelige akkurat nå — ikke en generisk brosjyre. Priser, størrelser og utsikt, på bordet foran deg.</p>
+      </div>
+      <div class="tile">
+        <div class="ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="#A8871B" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h5M9.5 14.5h5"/></svg></div>
+        <h3 data-i18n="t2h">Betalingsplaner forklart</h3>
+        <p data-i18n="t2p">Hvordan fungerer 0,5 % i måneden i praksis? Hva betaler du nå, og hva betaler du ved overlevering? Vi går gjennom tallene med deg.</p>
+      </div>
+      <div class="tile">
+        <div class="ico"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="#A8871B" stroke-width="1.7" stroke-linecap="round"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 21V7M12 7H7.5a2.5 2.5 0 110-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 100-5C13 2 12 7 12 7z"/></svg></div>
+        <h3 data-i18n="t3h">Tilbud kun på messen</h3>
+        <p data-i18n="t3p">Danube slipper tilbud under arrangementet som ikke er tilgjengelige verken før eller etter. Du må være i rommet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= BAND ======================= -->
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head sec-head-d">
+      <div class="sec-kicker" data-i18n="galKicker">Prosjektene</div>
+      <h2 class="sec-title" data-i18n="galTitle">Dette er det du får se</h2>
+      <p data-i18n="galSub">Danube-prosjekter med plantegninger, priser og ledige enheter — gjennomgått med deg på messen.</p>
+    </div>
+
+    <div class="gallery">
+      <figure class="gcard">
+        <img src="/oslo/img/danube-1.jpg" alt="Danube Properties — podium med basseng og uteområder" loading="lazy" width="1200" height="750">
+        <figcaption class="gcap">
+          <div class="gcap-t" data-i18n="g1t">Basseng og uteområder</div>
+          <div class="gcap-s" data-i18n="g1s">Danube Properties, Dubai</div>
+        </figcaption>
+      </figure>
+      <figure class="gcard">
+        <img src="/oslo/img/danube-2.jpg" alt="Danube Properties — leiligheter ved vannet med basseng og strand" loading="lazy" width="1200" height="750">
+        <figcaption class="gcap">
+          <div class="gcap-t" data-i18n="g2t">Leiligheter ved vannet</div>
+          <div class="gcap-s" data-i18n="g2s">Danube Properties, Dubai</div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="band-grid">
+      <div class="band-cell">
+        <div class="band-num">0,5 %</div>
+        <div class="band-lab" data-i18n="b1">Betalingsplan per måned</div>
+      </div>
+      <div class="band-cell">
+        <div class="band-num">100 %</div>
+        <div class="band-lab" data-i18n="b2">Utenlandsk eierskap tillatt</div>
+      </div>
+      <div class="band-cell">
+        <div class="band-num">2</div>
+        <div class="band-lab" data-i18n="b3">Dager i Oslo — 31. okt og 1. nov</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= VENUE ======================= -->
+<section class="venue">
+  <div class="wrap venue-grid">
+    <div>
+      <h2 data-i18n="vTitle">Radisson Blu Scandinavia Hotel</h2>
+      <div class="venue-rows">
+        <div class="vrow">
+          <div class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#0B1626" stroke-width="1.8" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="vrow-k" data-i18n="vAddrK">Adresse</div>
+            <div class="vrow-v">Holbergs gate 30<small>0166 Oslo, Norge</small></div>
+          </div>
+        </div>
+        <div class="vrow">
+          <div class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#0B1626" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div>
+            <div class="vrow-k" data-i18n="vDateK">Dato</div>
+            <div class="vrow-v" data-i18n="vDateV">Lørdag 31. oktober<small>Søndag 1. november 2026</small></div>
+          </div>
+        </div>
+        <div class="vrow">
+          <div class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#0B1626" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div>
+            <div class="vrow-k" data-i18n="vTimeK">Tidspunkt</div>
+            <!-- EDIT: confirm actual opening hours -->
+            <div class="vrow-v" data-i18n="vTimeV">Etter avtale<small>Vi bekrefter tidspunktet ditt på telefon</small></div>
+          </div>
+        </div>
+      </div>
+      <a class="btn-ghost" href="https://maps.google.com/?q=Radisson+Blu+Scandinavia+Hotel+Holbergs+gate+30+Oslo" target="_blank" rel="noopener" data-i18n="vMap">Åpne i Google Maps</a>
+    </div>
+
+    <figure class="venue-photo">
+      <img src="/oslo/img/radisson-oslo.jpg" alt="Radisson Blu Scandinavia Hotel, Holbergs gate 30, Oslo" width="1200" height="750">
+      <figcaption data-i18n="venueCap">Radisson Blu Scandinavia Hotel, Holbergs gate 30 — sentralt i Oslo, få minutter fra Nationaltheatret.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ======================= FINAL CTA ======================= -->
+<section class="final">
+  <div class="wrap">
+    <h2><span data-i18n="fTitleA">Begrenset antall plasser.</span> <span class="hl" data-i18n="fTitleB">Book din i dag.</span></h2>
+    <p data-i18n="fSub">Vi holder hvert møte en-til-en, så antall plasser per dag er begrenset. Legg igjen navn og telefonnummer, så ringer vi og avtaler tidspunkt.</p>
+    <a href="#register" class="btn-lg" data-i18n="fBtn">Book min plass</a>
+    <p class="note" data-i18n="fNote">Tar under 30 sekunder · Ingen forpliktelser</p>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand-mark">GK</div>
+        <p style="max-width:30em" data-i18n="footAbout">Golden Key Real Estate — eiendomsmegler i Dubai. Vi hjelper internasjonale kjøpere med å finne, finansiere og kjøpe eiendom i De forente arabiske emirater.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footEvent">Arrangementet</h4>
+        <ul>
+          <li>Radisson Blu Scandinavia</li>
+          <li>Holbergs gate 30, 0166 Oslo</li>
+          <li data-i18n="footDates">31. oktober – 1. november 2026</li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footContact">Kontakt</h4>
+        <ul>
+          <li><a href="https://www.goldenkeydxb.com" target="_blank" rel="noopener">goldenkeydxb.com</a></li>
+          <li><a href="tel:+97145651830">+971 4 565 1830</a></li>
+          <li><a href="#" id="privacyLink" data-i18n="footPrivacy">Personvernerklæring</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Golden Key Real Estate</span>
+      <span data-i18n="footRera">RERA ORN: [legg inn nummer] · Permit: [legg inn nummer]</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ======================= STICKY MOBILE CTA ======================= -->
+<div class="sticky" id="sticky">
+  <div class="sticky-txt">
+    <div class="sticky-k" data-i18n="stickyK">31. okt – 1. nov · Oslo</div>
+    <div class="sticky-v" data-i18n="stickyV">Begrenset antall plasser</div>
+  </div>
+  <a href="#register" data-i18n="stickyBtn">Book plass</a>
+</div>
+
+<script>
+/* ============================================================
+   CONFIG — EDIT THESE THREE THINGS BEFORE GOING LIVE
+   ============================================================ */
+const CONFIG = {
+  // 1. Where form submissions go.
+  //    Easiest no-backend option: create a free form at https://formspree.io
+  //    or https://web3forms.com and paste the endpoint URL here.
+  //    Leave as '' to fall back to WhatsApp (see below).
+  FORM_ENDPOINT: '/api/pixxi/lead',  // Golden Key Pixxi CRM (same as main website)
+
+  // 2. WhatsApp fallback / secondary contact. Digits only, with country code.
+  WHATSAPP: '97145651830',
+
+  // 3. Meta Pixel ID. Leave '' to disable.
+  PIXEL_ID: '',
+
+  // Event start — Oslo is UTC+1 (CET) from 25 October 2026.
+  EVENT_START: '2026-10-31T10:00:00+01:00'
+};
+
+/* ---------------- META PIXEL ---------------- */
+(function(){
+  if(!CONFIG.PIXEL_ID) return;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+  (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', CONFIG.PIXEL_ID);
+  fbq('track', 'PageView');
+})();
+
+/* ---------------- TRANSLATIONS ---------------- */
+const T = {
+  no:{
+    brandTag:'Golden Key<br>× Danube Properties',
+    navCta:'Meld deg på',
+    eyebrow:'Kun to dager · Oslo',
+    h1a:'Dubai kommer', h1b:'til Oslo',
+    lede:'Danube Properties og Golden Key Real Estate møter deg ansikt til ansikt med plantegninger, ledige enheter og priser — og tilbud som kun gis under arrangementet.',
+    factDateK:'Dato', factDateV:'31. oktober &amp; 1. november 2026<small>Lørdag og søndag</small>',
+    factVenueK:'Sted', factVenueV:'Radisson Blu Scandinavia<small>Holbergs gate 30, 0166 Oslo</small>',
+    factPayK:'Betalingsplan', factPayV:'Fra 0,5 % per måned<small>Fleksible planer</small>',
+    factOfferK:'Tilbud', factOfferV:'Eksklusivt på messen<small>Ikke tilgjengelig senere</small>',
+    cdLabel:'Det er igjen', cdD:'Dager', cdH:'Timer', cdM:'Min', cdS:'Sek',
+    usp1:'Snakk direkte med teamet som selger enhetene',
+    usp2:'100 % utenlandsk eierskap — ingen flyreise nødvendig',
+    usp3:'Begrenset antall plasser — hvert møte er en-til-en',
+    formKicker:'Meld deg på', formTitle:'Book din plass',
+    formSub:'Legg igjen navn og telefonnummer. Vi ringer deg, avtaler tidspunkt og sender detaljene på SMS.',
+    lblName:'Fullt navn', phName:'Ola Nordmann',
+    lblPhone:'Telefonnummer', phPhone:'400 00 000',
+    consent:'Jeg samtykker til at Golden Key Real Estate kontakter meg på telefon eller SMS om dette arrangementet.',
+    btnSubmit:'Book min plass',
+    formFoot:'Navn og telefonnummer brukes kun til å kontakte deg om arrangementet i Oslo. Deles ikke med tredjeparter.',
+    okTitle:'Takk! Plassen din er registrert',
+    okBody:'Vi ringer deg innen 24 timer for å avtale tidspunkt. Arrangementet holdes på Radisson Blu Scandinavia Hotel, Holbergs gate 30, Oslo.',
+    okMap:'Se veibeskrivelse',
+    errName:'Vennligst skriv inn navnet ditt.',
+    errPhone:'Vennligst skriv inn et gyldig telefonnummer.',
+    errConsent:'Du må samtykke for å melde deg på.',
+    errSend:'Noe gikk galt. Prøv igjen, eller ring oss på +971 4 565 1830.',
+    sending:'Sender …',
+    whyKicker:'Hvorfor komme', whyTitle:'Alt du trenger å vite, i ett møte',
+    whySub:'Ingen flyreise. Ingen rådgiver på en skjerm. Sett deg ned med dem som faktisk selger enhetene.',
+    t1h:'Plantegninger og ledige enheter',
+    t1p:'Se de faktiske enhetene som er tilgjengelige akkurat nå — ikke en generisk brosjyre. Priser, størrelser og utsikt, på bordet foran deg.',
+    t2h:'Betalingsplaner forklart',
+    t2p:'Hvordan fungerer 0,5 % i måneden i praksis? Hva betaler du nå, og hva betaler du ved overlevering? Vi går gjennom tallene med deg.',
+    t3h:'Tilbud kun på messen',
+    t3p:'Danube slipper tilbud under arrangementet som ikke er tilgjengelige verken før eller etter. Du må være i rommet.',
+    b1:'Betalingsplan per måned', b2:'Utenlandsk eierskap tillatt', b3:'Dager i Oslo — 31. okt og 1. nov',
+    vTitle:'Radisson Blu Scandinavia Hotel',
+    vAddrK:'Adresse', vDateK:'Dato', vDateV:'Lørdag 31. oktober<small>Søndag 1. november 2026</small>',
+    vTimeK:'Tidspunkt', vTimeV:'Etter avtale<small>Vi bekrefter tidspunktet ditt på telefon</small>',
+    vMap:'Åpne i Google Maps',
+    venueCap:'Radisson Blu Scandinavia Hotel, Holbergs gate 30 — sentralt i Oslo, få minutter fra Nationaltheatret.',
+    galKicker:'Prosjektene', galTitle:'Dette er det du får se',
+    galSub:'Danube-prosjekter med plantegninger, priser og ledige enheter — gjennomgått med deg på messen.',
+    g1t:'Basseng og uteområder', g1s:'Danube Properties, Dubai',
+    g2t:'Leiligheter ved vannet', g2s:'Danube Properties, Dubai',
+    fTitleA:'Begrenset antall plasser.', fTitleB:'Book din i dag.',
+    fSub:'Vi holder hvert møte en-til-en, så antall plasser per dag er begrenset. Legg igjen navn og telefonnummer, så ringer vi og avtaler tidspunkt.',
+    fBtn:'Book min plass', fNote:'Tar under 30 sekunder · Ingen forpliktelser',
+    footAbout:'Golden Key Real Estate — eiendomsmegler i Dubai. Vi hjelper internasjonale kjøpere med å finne, finansiere og kjøpe eiendom i De forente arabiske emirater.',
+    footEvent:'Arrangementet', footDates:'31. oktober – 1. november 2026',
+    footContact:'Kontakt', footPrivacy:'Personvernerklæring',
+    footRera:'RERA ORN: [legg inn nummer] · Permit: [legg inn nummer]',
+    stickyK:'31. okt – 1. nov · Oslo', stickyV:'Begrenset antall plasser', stickyBtn:'Book plass'
+  },
+  en:{
+    brandTag:'Golden Key<br>× Danube Properties',
+    navCta:'Register',
+    eyebrow:'Two days only · Oslo',
+    h1a:'Dubai is coming', h1b:'to Oslo',
+    lede:'Danube Properties and Golden Key Real Estate meet you face to face with floor plans, live availability and prices — plus offers released only at the event.',
+    factDateK:'Date', factDateV:'31 October &amp; 1 November 2026<small>Saturday and Sunday</small>',
+    factVenueK:'Venue', factVenueV:'Radisson Blu Scandinavia<small>Holbergs gate 30, 0166 Oslo</small>',
+    factPayK:'Payment plan', factPayV:'From 0.5% per month<small>Flexible plans</small>',
+    factOfferK:'Offers', factOfferV:'Exclusive to the event<small>Not available afterwards</small>',
+    cdLabel:'Time remaining', cdD:'Days', cdH:'Hours', cdM:'Min', cdS:'Sec',
+    usp1:'Speak directly with the team that sells these units',
+    usp2:'100% foreign ownership — no flight required',
+    usp3:'Limited places — every meeting is one-to-one',
+    formKicker:'Register', formTitle:'Book your place',
+    formSub:'Leave your name and phone number. We’ll call you, agree a time, and send the details by SMS.',
+    lblName:'Full name', phName:'Your name',
+    lblPhone:'Phone number', phPhone:'400 00 000',
+    consent:'I agree to be contacted by Golden Key Real Estate by phone or SMS about this event.',
+    btnSubmit:'Book my place',
+    formFoot:'Your name and phone number are used only to contact you about the Oslo event. Not shared with third parties.',
+    okTitle:'Thank you! Your place is registered',
+    okBody:'We’ll call you within 24 hours to arrange a time. The event is at the Radisson Blu Scandinavia Hotel, Holbergs gate 30, Oslo.',
+    okMap:'Get directions',
+    errName:'Please enter your name.',
+    errPhone:'Please enter a valid phone number.',
+    errConsent:'Please accept the consent to register.',
+    errSend:'Something went wrong. Please try again, or call us on +971 4 565 1830.',
+    sending:'Sending …',
+    whyKicker:'Why attend', whyTitle:'Everything you need, in one meeting',
+    whySub:'No flight. No adviser on a screen. Sit down with the people who actually sell these units.',
+    t1h:'Floor plans and live availability',
+    t1p:'See the actual units available right now — not a generic brochure. Prices, sizes and views, on the table in front of you.',
+    t2h:'Payment plans explained',
+    t2p:'How does 0.5% a month work in practice? What do you pay now, and what do you pay on handover? We go through the numbers with you.',
+    t3h:'Offers released at the event',
+    t3p:'Danube releases offers during the event that aren’t available before or after. You have to be in the room.',
+    b1:'Payment plan per month', b2:'Foreign ownership allowed', b3:'Days in Oslo — 31 Oct and 1 Nov',
+    vTitle:'Radisson Blu Scandinavia Hotel',
+    vAddrK:'Address', vDateK:'Dates', vDateV:'Saturday 31 October<small>Sunday 1 November 2026</small>',
+    vTimeK:'Time', vTimeV:'By appointment<small>We confirm your slot by phone</small>',
+    vMap:'Open in Google Maps',
+    venueCap:'Radisson Blu Scandinavia Hotel, Holbergs gate 30 — central Oslo, minutes from Nationaltheatret.',
+    galKicker:'The projects', galTitle:'This is what you\u2019ll see',
+    galSub:'Danube projects with floor plans, prices and live availability — walked through with you at the event.',
+    g1t:'Pool deck and grounds', g1s:'Danube Properties, Dubai',
+    g2t:'Waterfront residences', g2s:'Danube Properties, Dubai',
+    fTitleA:'Places are limited.', fTitleB:'Book yours today.',
+    fSub:'Every meeting is one-to-one, so places per day are limited. Leave your name and phone number and we’ll call to arrange a time.',
+    fBtn:'Book my place', fNote:'Takes under 30 seconds · No obligation',
+    footAbout:'Golden Key Real Estate — a Dubai property brokerage. We help international buyers find, finance and purchase property across the United Arab Emirates.',
+    footEvent:'The event', footDates:'31 October – 1 November 2026',
+    footContact:'Contact', footPrivacy:'Privacy policy',
+    footRera:'RERA ORN: [add number] · Permit: [add number]',
+    stickyK:'31 Oct – 1 Nov · Oslo', stickyV:'Limited places', stickyBtn:'Book place'
+  }
+};
+
+let LANG = 'no';
+
+function setLang(l){
+  LANG = l;
+  document.documentElement.lang = (l === 'no') ? 'no' : 'en';
+  document.getElementById('btnNo').classList.toggle('on', l === 'no');
+  document.getElementById('btnEn').classList.toggle('on', l === 'en');
+
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    const v = T[l][el.getAttribute('data-i18n')];
+    if(v !== undefined) el.innerHTML = v;
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(function(el){
+    const v = T[l][el.getAttribute('data-i18n-ph')];
+    if(v !== undefined) el.placeholder = v;
+  });
+  try{ localStorage.setItem('gk_lang', l); }catch(e){}
+}
+
+/* restore language, or guess from browser */
+(function(){
+  let saved = null;
+  try{ saved = localStorage.getItem('gk_lang'); }catch(e){}
+  if(!saved){
+    saved = (navigator.language || '').toLowerCase().indexOf('nb') === 0 ||
+            (navigator.language || '').toLowerCase().indexOf('no') === 0 ||
+            (navigator.language || '').toLowerCase().indexOf('nn') === 0 ? 'no' : 'no';
+  }
+  setLang(saved);
+})();
+
+/* ---------------- COUNTDOWN ---------------- */
+(function(){
+  const target = new Date(CONFIG.EVENT_START).getTime();
+  const d = document.getElementById('cdD'),
+        h = document.getElementById('cdH'),
+        m = document.getElementById('cdM'),
+        s = document.getElementById('cdS');
+  function pad(n){ return String(Math.max(0, n)).padStart(2,'0'); }
+  function tick(){
+    const diff = target - Date.now();
+    if(diff <= 0){ d.textContent='00'; h.textContent='00'; m.textContent='00'; s.textContent='00'; return; }
+    d.textContent = pad(Math.floor(diff / 86400000));
+    h.textContent = pad(Math.floor(diff / 3600000) % 24);
+    m.textContent = pad(Math.floor(diff / 60000) % 60);
+    s.textContent = pad(Math.floor(diff / 1000) % 60);
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+/* ---------------- STICKY CTA ---------------- */
+(function(){
+  const bar = document.getElementById('sticky');
+  const card = document.getElementById('register');
+  function onScroll(){
+    const past = window.scrollY > 520;
+    const cardRect = card.getBoundingClientRect();
+    const cardVisible = cardRect.top < window.innerHeight && cardRect.bottom > 0;
+    const show = past && !cardVisible;
+    bar.classList.toggle('on', show);
+    document.body.classList.toggle('has-sticky', show);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+
+/* ---------------- FORM ---------------- */
+(function(){
+  const form = document.getElementById('leadForm');
+  const btn  = document.getElementById('submitBtn');
+  const err  = document.getElementById('msgErr');
+  const formView = document.getElementById('formView');
+  const okView   = document.getElementById('successView');
+
+  function showErr(msg){
+    err.textContent = msg;
+    err.className = 'msg err';
+    err.scrollIntoView({block:'nearest', behavior:'smooth'});
+  }
+  function clearErr(){ err.className = 'msg'; err.textContent = ''; }
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    clearErr();
+
+    // honeypot — silently drop bots
+    if(form.company.value) return;
+
+    const name    = form.name.value.trim();
+    const phoneRaw= form.phone.value.trim();
+    const phone   = phoneRaw.replace(/[^\d+]/g,'');
+    const consent = form.consent.checked;
+
+    if(name.length < 2){ showErr(T[LANG].errName); form.name.focus(); return; }
+    if(phone.replace(/\D/g,'').length < 7){ showErr(T[LANG].errPhone); form.phone.focus(); return; }
+    if(!consent){ showErr(T[LANG].errConsent); return; }
+
+    const payload = {
+      name: name,
+      email: '',
+      phone: '+47 ' + phoneRaw,
+      source: 'Oslo Roadshow landing page',
+      message:
+        'Registration: Dubai Property Roadshow (Danube x Golden Key), Oslo, 31 Oct & 1 Nov 2026\n' +
+        'Venue: Radisson Blu Scandinavia, Holbergs gate 30, Oslo\n' +
+        'Language: ' + (LANG === 'no' ? 'Norwegian' : 'English') + '\n' +
+        'Consent to contact by phone/SMS: yes\n' +
+        'Page: ' + location.href
+    };
+
+    btn.disabled = true;
+    const original = btn.textContent;
+    btn.textContent = T[LANG].sending;
+
+    function succeed(){
+      if(window.fbq) fbq('track','Lead',{content_name:'Oslo Roadshow'});
+      formView.style.display = 'none';
+      okView.classList.add('on');
+      okView.scrollIntoView({block:'center', behavior:'smooth'});
+    }
+
+    // No endpoint configured → hand off to WhatsApp so no lead is lost
+    if(!CONFIG.FORM_ENDPOINT){
+      const txt = encodeURIComponent(
+        (LANG === 'no'
+          ? 'Hei, jeg vil melde meg på Dubai Eiendomsmesse i Oslo.\nNavn: '
+          : 'Hello, I would like to register for the Dubai Property Roadshow in Oslo.\nName: ')
+        + name + '\nTlf: +47 ' + phoneRaw
+      );
+      window.open('https://wa.me/' + CONFIG.WHATSAPP + '?text=' + txt, '_blank');
+      succeed();
+      btn.disabled = false; btn.textContent = original;
+      return;
+    }
+
+    try{
+      const res = await fetch(CONFIG.FORM_ENDPOINT, {
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify(payload)
+      });
+      let data = {};
+      try{ data = await res.json(); }catch(_){}
+      if(!res.ok || data.success === false) throw new Error('bad status ' + res.status);
+      succeed();
+    }catch(ex){
+      showErr(T[LANG].errSend);
+    }finally{
+      btn.disabled = false;
+      btn.textContent = original;
+    }
+  });
+})();
+</script>
+</body>
+</html>
